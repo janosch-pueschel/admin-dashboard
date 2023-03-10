@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+  --basic-font-color: black;
+  --subtext-font-color: white;
+  --accent-font-color: purple;
+}
+
+.container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template: 1fr 4fr / 1fr 4fr;
+}
+
+header {
+  grid-area: 1 / 2 / span 1 / span 2;
+}
+
+aside {
+  padding: 20px;
+  grid-area: 1 / 1 / span 2 / span 1;
+  height: 100vh;
+  background-color: #909cc2;
+  display: grid;
+  grid-template: 1fr 4fr 2fr 5fr / 1fr 6fr;
+  row-gap: 50px;
+  column-gap: 5px;
+  font-weight: 900;
+}
+
+.header-icon__container {
+  grid-area: 1 / 1 / span 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside__header-icon {
+  width: 40px;
+}
+
+.aside__header {
+  font-size: 30px;
+  grid-area: 1 / 2 / span 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aside__nav-icon {
+  width: 20px;
+}
+
+.aside__primary-nav {
+  grid-area: 2 / 2 / span 1 / span 1;
+  list-style-type: none;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.aside__primary-nav--icon {
+  grid-area: 2 / 1 / span 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aside__secondary-nav {
+  grid-area: 3 / 2 / span 1 / span 1;
+  list-style-type: none;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.aside__secondary-nav--icon {
+  grid-area: 3 / 1 / span 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  grid-area: 2 / 2 / span 1 / span 1;
+  display: grid;
+  grid-template: 1fr repeat(3, 4fr) / repeat(2, 2fr) 1fr;
+}
+
+.cards__header {
+  grid-area: 1 / 1 / span 1 / span 2;
+}
+
+.side__header {
+  grid-area: 1 / 3 / span 1 / span 1;
+}
+
+.cards__container {
+  grid-area: 2 / 1 / span 3 / span 2;
+  /* display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr) */
+}
+
+.side__container {
+  grid-area: 3 / 2 / span 1 / span 2;
+}
