@@ -8,7 +8,6 @@ body {
 
   --basic-font-color: black;
   --subtext-font-color: white;
-  --accent-font-color: purple;
 }
 
 .container {
@@ -20,13 +19,91 @@ body {
 
 header {
   grid-area: 1 / 2 / span 1 / span 2;
+  display: grid;
+  grid-template: repeat(2, 1fr) / 2fr 1fr;
+  background-color: #eeeeee;
+  padding: 10px 50px 10px 50px;
+}
+
+.header__searchbar-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__searchbar-icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.header__searchbar {
+  width: 90%;
+  height: 15px;
+  padding: 5px 15px 5px 15px;
+  border: none;
+  border-radius: 20px;
+}
+
+.header__searchbar:focus {
+  outline: none;
+  border: black 1px solid;
+}
+
+.header__notification-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15% 0 15%;
+}
+
+.header__notification-icon {
+  width: 20px;
+}
+
+.header__notification-picture {
+  width: 40px;
+  border-radius: 30px;
+}
+
+.header__greeting-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__greeting-picture {
+  width: 70px;
+  border-radius: 40px;
+  margin-right: 20px;
+}
+
+.header__greeting-name {
+  font-size: 18px;
+  font-weight: 900;
+  margin-top: 5px;
+}
+
+.header__button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button-primary {
+  width: 100px;
+  height: 35px;
+  background-color: #0081c9;
+  color: #ffff;
+  border: none;
+  border-radius: 30px;
 }
 
 aside {
   padding: 20px;
   grid-area: 1 / 1 / span 2 / span 1;
   height: 100vh;
-  background-color: #909cc2;
+  background-color: #0081c9;
+  color: #ffff;
   display: grid;
   grid-template: 1fr 4fr 2fr 5fr / 1fr 6fr;
   row-gap: 50px;
