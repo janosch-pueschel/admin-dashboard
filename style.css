@@ -23,7 +23,6 @@ header {
   grid-template: repeat(2, 1fr) / 2fr 1fr;
   background-color: #eeeeee;
   padding: 10px 50px 10px 50px;
-  box-shadow: 
 }
 
 .header__searchbar-container {
